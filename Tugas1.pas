@@ -1,56 +1,34 @@
-program pascalforboomer;
-
+program makanan;
 uses crt;
 
-var
-a, b, c: integer;
+var nasi: byte;
 
 begin
-    clrscr;
+clrscr;
 
-    write('masukkan angka 1: ');readln(a);
-    write('masukkan angka 2: ');readln(b);
-    write('masukkan angka 3: ');readln(c);
+writeln('=======================================================================');
+writeln('                         Menu yang tersedia');
+writeln('1. Nasi Padang ');
+writeln('2. Nasi Campur ');
+writeln('3. Nasi Gurih ');
+writeln('4. Nasi Kuning ');
+writeln('5. Nasi Soto ');
+writeln('=======================================================================');
+writeln;
+write('Pilih nomor menu makanan anda: ');readln(nasi);
+case (nasi) of
+    1: writeln('Nasi Padang Rp. 15000 ');
+    2: writeln('Nasi Campur Rp. 12000 ');
+    3: writeln('Nasi Gurih Rp. 10000 ');
+    4: writeln('Nasi Kuning Rp. 13000 ');
+    5: writeln('Nasi Soto Rp. 17000 ');
 
- if (a <= b) then 
-    if (b <= c) then
-            begin writeln('urutan:  ',a,' ',b,' ',c); //Kondisi a<=b<=c
-            end
-    else if (c <= a) then
-            begin writeln('urutan:  ',c,' ',a,' ',b); //Kondisi c<=a<=b
-            end
-    else 
+else 
     begin 
-   writeln('error!');
-   end       
- else if (b <= a) then
-      if (a <= c) then
-            begin writeln('urutan:  ',b,' ',a,' ',c); //Kondisi b<=a<=c
-            end
-      else if (c <= b) then
-            begin writeln('urutan:  ',c,' ',b,' ',a); //Kondisi c<=b<=a
-            end
-      else
-      begin 
-      writeln('error!');
-      end
- else if (c <= a) then
-         if (a <= b)
-          then 
-            begin writeln('urutan:  ',c,' ',a,' ',b); //Kondisi c<=a<=b
-            end
+        writeln(' Maaf, hanya tersedia 5 menu makanan');
+     end;   
+end;
 
-         else if (b <= c) then
-            begin writeln('urutan:  ',b,' ',c,' ',a); //Kondisi b<=c<=a
-            end
-         else 
-          begin 
-            writeln('error!');
-          end
- else 
-   begin 
-   writeln('error!');
-   end;
-
- readln;
+writeln;
+readln;
 end.
