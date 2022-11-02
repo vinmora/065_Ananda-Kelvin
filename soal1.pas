@@ -1,4 +1,4 @@
-program looptae;
+program soal2;
 uses crt;
 var
 i,b,j,n : integer;
