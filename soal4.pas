@@ -23,4 +23,5 @@ begin
 
             writeln;
         end;
+        readln;
 end.
