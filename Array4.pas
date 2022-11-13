@@ -12,8 +12,17 @@ Mean,Avg: real;
 begin
 clrscr;
 
-write('Masukkan jumlah siswa: ');readln(n);
+write('Masukkan jumlah siswa (Maks 5) : ');readln(n);
 writeln;
+
+if (n > 5) then
+    begin
+        clrscr;
+        writeln('Jumlah maksimum siswa adalah 5!');
+    end
+
+else
+begin
 
 for i := 1 to n do
     begin 
@@ -62,6 +71,7 @@ for i :=  1 to n do
 
         Avg := 0;
     end;
+end;
 writeln;
 readln;
 
