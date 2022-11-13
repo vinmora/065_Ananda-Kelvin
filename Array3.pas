@@ -2,17 +2,18 @@ program array3;
 uses crt;
 
 type
-Array_1 = array[1..10] of integer;
+Array_1 = array[1..10] of real;
 
 var
 i,j,m,n : integer;
-z : integer;
+z : real;
 L : Array_1;
 
 begin
 clrscr;
 
 write('Masukkan jumlah siswa (1-10) : ');readln(n);
+writeln;
 
 if  (n <= 10) and (n > 0) then
     begin
@@ -23,7 +24,7 @@ if  (n <= 10) and (n > 0) then
             write(' : ');readln(L[i]);
         end;
 
-    for i:= 1 to n do
+    for i:= n downto 1 do
         begin
             for j:= 1 to i do
                 begin
@@ -40,7 +41,7 @@ if  (n <= 10) and (n > 0) then
 
     for i := 1 to n do
         begin;
-         write(L[i],' ');
+         write(L[i]:3:2,'  ');
         end;
 
 end
