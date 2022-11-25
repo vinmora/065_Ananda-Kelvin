@@ -2,7 +2,7 @@ program soal2;
 uses crt;
 
 
-procedure mean(n: integer);
+function mean(n: integer): real;
 
     type
     arr1 = array [1..50] of integer;
@@ -25,17 +25,20 @@ procedure mean(n: integer);
                 index := index + m[i];
             end;
         avg := index / n;
-        writeln('Rata - rata : ',avg:4:2);
+        mean := avg;
+       
     end;
 
 
 var n : integer;
+hasil: real;
 begin
     clrscr;
     write('Masukkan banyak data: ');readln(n);
     writeln;
 
-    mean(n);
+    hasil := mean(n);
+    writeln(hasil:4:2);
     
     writeln;
 end.
