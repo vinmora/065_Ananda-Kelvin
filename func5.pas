@@ -1,7 +1,7 @@
 program soal5;
 uses crt;
 
-procedure aritmetika(n : integer);
+function aritmetika(n : integer): longint;
     var
         i,j,k,l,x,y,z : integer;
     begin
